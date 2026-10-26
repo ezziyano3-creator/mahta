@@ -1,0 +1,200 @@
+
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>برای مهتا ❤️</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+    font-family: Tahoma, sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #170914, #541832, #230d35);
+}
+
+.card {
+    width: 100%;
+    max-width: 480px;
+    padding: 30px 24px;
+    text-align: center;
+    border: 1px solid #ff9bc966;
+    border-radius: 25px;
+    background: #ffffff0c;
+    box-shadow: 0 0 45px #ff398b30;
+    backdrop-filter: blur(12px);
+    z-index: 2;
+}
+
+.heart {
+    font-size: 65px;
+    animation: beat 1.2s infinite;
+}
+
+h1 { color: #ffacd0; }
+
+p {
+    font-size: 15px;
+    line-height: 2.2;
+    color: #ffe7f0;
+}
+
+button {
+    font-family: inherit;
+    font-size: 15px;
+    padding: 14px 20px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 30px;
+    background: #ff579b;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    transform: scale(1.04);
+    background: #ff80b3;
+}
+
+#letter {
+    display: none;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #ff91bd55;
+    animation: appear 1s ease;
+}
+
+.signature {
+    color: #ffacd0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.floating {
+    position: fixed;
+    bottom: -35px;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+    z-index: 1;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="heart">🥺❤️</div>
+
+    <h1>مهتای قشنگم...</h1>
+
+    <p>
+        این صفحه برای یه آدم خاصه...
+        <br>
+        برای کسی که دلخور شدنش برام مهمه،
+        چون خودِ اون برام مهمه. 🫂
+    </p>
+
+    <button onclick="openLetter()">
+        مهتا، یه حرفی باهات دارم 💌
+    </button>
+
+    <div id="letter">
+        <h2 style="color:#ffacd0">ببخش منو، عشق من ❤️</h2>
+
+        <p>
+            مهتا جانم...
+            <br><br>
+            اون حرفی که بهت زدم، درباره‌ی اینکه
+            دوست‌پسر جدید پیدا کردی و دیگه جوابمو نمی‌دی،
+            از نظر من یه شوخی بود؛ ولی الان می‌فهمم
+            که ممکنه ناراحتت کرده باشه.
+            <br><br>
+            نمی‌خوام پشت شوخی بودنش قایم بشم
+            یا بگم چون قصدم خندوندنت بود، پس حق نداشتی
+            ناراحت بشی. احساس تو برام مهمه و بابت
+            ناراحت کردنت واقعاً معذرت می‌خوام.
+            <br><br>
+            تو برای من یه آدم معمولی نیستی که
+            ناراحتیت رو ساده بگیرم.
+            نمی‌خوام فقط با یه سایت یا چندتا جمله
+            ثابت کنم دوستت دارم؛ می‌خوام با رفتارم
+            هم بهت نشون بدم که چقدر برام عزیزی.
+            <br><br>
+            لازم نیست همین الان دلخوریت تموم بشه
+            یا فوری منو ببخشی؛ فقط می‌خوام بدونی
+            که ناراحت شدنت برام بی‌اهمیت نیست.
+            <br><br>
+            دوستت دارم، مهتا...
+            نه برای اینکه همیشه همه‌چی خوب باشه،
+            بلکه چون خودت برام عزیزی؛ حتی وقتی
+            ازم دلخوری. 🥹❤️
+        </p>
+
+        <div class="signature">
+            ببخش منو، کوچولوی دوست‌داشتنی من 💗
+        </div>
+
+        <div style="font-size:35px;margin-top:15px">
+            🫂💋❤️
+        </div>
+    </div>
+
+</div>
+
+<script>
+function openLetter() {
+    const letter = document.getElementById("letter");
+    letter.style.display = "block";
+    document.querySelector("button").textContent =
+        "این حرفا از ته قلبمه، مهتا ❤️";
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "floating";
+    heart.textContent = ["❤️", "💗", "💕", "💖", "🫶🏻"][
+        Math.floor(Math.random() * 5)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (16 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 10000);
+}
+
+setInterval(createHeart, 450);
+</script>
+
+</body>
+</html>
